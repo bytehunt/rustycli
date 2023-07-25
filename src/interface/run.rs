@@ -32,8 +32,8 @@ impl RequestPayload {
             mode: cli.mode,
             edition: cli.edition,
             crateType: "bin".to_string(),
-            tests: false,
-            backtrace: true,
+            tests: cli.tests,
+            backtrace: cli.backtrace,
             code: code.to_string(), 
         }
     }

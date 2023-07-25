@@ -37,5 +37,5 @@ pub struct Cli {
 
     #[arg(short, long, default_value = "false")]
     /// Speficy tests t/f
-    pub tests: String,
+    pub tests: bool,
 }
