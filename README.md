@@ -55,7 +55,10 @@
 ## Usages 🎠
   - Everything is under help menu. The most required flag is `-r` or `--run` to pass your code. The below is a small demo ❤️‍🩹
 
-https://github.com/pwnwriter/rustycli/assets/90331517/2f5b6d1b-e4eb-4f63-8610-6caccdfc13b0
+
+
+https://github.com/pwnwriter/rustycli/assets/90331517/3d67217d-e11b-4e3f-9ee3-ca3c3f673c29
+
 
 
 
