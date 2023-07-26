@@ -50,13 +50,13 @@
   $ sudo/doas pacman -Syyy rustycli
   ```
 
-https://github.com/pwnwriter/rustycli/assets/90331517/153e417f-ce2a-4d4c-8eb1-e10c19e108a9
-
-
 
 <a name="usages"></a>
 ## Usages 🎠
   - Everything is under help menu. The most required flag is `-r` or `--run` to pass your code. The below is a small demo ❤️‍🩹
+
+<a href="https://youtu.be/CPb9tNXOt50" target="_blank"><img src="https://github.com/pwnwriter/rustycli/blob/images/thumb.png" alt="img"  align="center"/></a>
+
 
   
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
