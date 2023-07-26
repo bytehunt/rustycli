@@ -4,11 +4,11 @@
   </a>
 
 <h4><strong><code>rustycli</code></strong> — 🦀 Access the rust playground right in terminal 🍥</h4>
-<a href="https://github.com/pwnwriter/rustycli/releases"><img src="https://img.shields.io/github/v/release/pwnwriter/rustycli?style=flat&amp;labelColor=56534b&amp;color=c1c1b6&amp;logo=GitHub&amp;logoColor=white" alt="GitHub Release"></a>
-<a href="https://crates.io/crates/rustycli/"><img src="https://img.shields.io/crates/v/rustycli?style=flat&amp;labelColor=56534b&amp;color=c1c1b6&amp;logo=Rust&amp;logoColor=white" alt="Crate Release"></a>
-<a href="https://github.com/pwnwriter/haylxon/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-white.svg" alt="MIT LICENSE"></a>
-<a href="https://twitter.com/intent/tweet?text=Check%20out%20rustycli%20-%20An%20exceptional%20tool%20that%20allows%20you%20to%20access%20the%20Rust%20Playground%20right%20in%20the%20terminal%20without%20limitations!%20🚀%20&url=https%3A%2F%2Fgithub.com%2Fpwnwriter%2Frustycli"><img alt="Twitter Share" src="https://img.shields.io/twitter/url/https/github.com/pwnwriter/rustycli.svg?style=social"></a>
 
+
+<a href="https://crates.io/crates/rustycli/"><img src="https://img.shields.io/crates/v/rustycli?style=flat&amp;labelColor=56534b&amp;color=c1c1b6&amp;logo=Rust&amp;logoColor=white" alt="Crate Release"></a>
+[![GitHub top language](https://img.shields.io/github/languages/top/pwnwriter/rustycli)](https://github.com/pwnwriter/rustycli/search?l=rust;logoColor=white)
+<a href="https://github.com/pwnwriter/haylxon/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-white.svg" alt="MIT LICENSE"></a>
 [![ko-fi](https://img.shields.io/badge/support-pwnwriter%20-pink?logo=kofi&logoColor=white)](https://ko-fi.com/pwnwriter)
 </div>
 
