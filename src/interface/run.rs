@@ -2,6 +2,7 @@ use crate::interface::args::Cli;
 use clap::Parser;
 use reqwest::{header::CONTENT_TYPE, Client};
 use serde::{Deserialize, Serialize};
+use spinoff::{spinners, Color, Spinner};
 
 const PLAYGROUND_URL: &str = "https://play.rust-lang.org/execute";
 
@@ -47,6 +48,7 @@ pub async fn run_rustycli() -> Result<(), Box<dyn std::error::Error>> {
     let cli = Cli::parse();
     let filename = &cli.run;
     let raw_code = tokio::fs::read_to_string(filename).await?;
+    let spinner = Spinner::new(spinners::Dots, "Compiling... ", Color::Green);
 
     // Trim leading and trailing whitespaces from the code before executing it
     let code = raw_code.trim();
@@ -74,10 +76,14 @@ pub async fn run_rustycli() -> Result<(), Box<dyn std::error::Error>> {
     // println!("{:?}", resp_json);
 
     // Display the output of the executed code (if any) or show an error message
-    match (resp_json.stdout, resp_json.stderr) {
-        (Some(stdout), _) if !stdout.is_empty() => println!("{}", stdout),
-        (_, Some(stderr)) => println!("{}", stderr),
-        _ => println!("Error: No stdout or stderr found in the response."),
-    }
+
+    let match_result = match (resp_json.stdout, resp_json.stderr) {
+        (Some(stdout), _) if !stdout.is_empty() => stdout,
+        (_, Some(stderr)) => stderr,
+        _ => String::from("Error: No stdout or stderr found in the response."),
+    };
+
+    spinner.success(&match_result);
+    // println!("{}", match_result);
     Ok(())
 }
