@@ -1,3 +1,7 @@
+fn print_message(message: &str) {
+    println!("Message: {}", message);
+}
+
 fn main() {
-    println("Hello world");
+    print_messag("Hello, World!"); // Incorrect function name in the call.
 }
