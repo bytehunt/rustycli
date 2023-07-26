@@ -3,7 +3,7 @@
     <img src="https://github.com/pwnwriter/rustycli/blob/images/rustycli-crop.gif" width="300" style="border-radius: 50%;">
   </a>
 
-<h4><strong><code>rustycli</code></strong> — 🦀 Access the rust playground right in terminal 🍥</h4>
+<h4><strong><code>rustycli</code></strong> — 🦀 Access the rust playground right in your terminal 🍥</h4>
 
 
 <a href="https://crates.io/crates/rustycli/"><img src="https://img.shields.io/crates/v/rustycli?style=flat&amp;labelColor=56534b&amp;color=c1c1b6&amp;logo=Rust&amp;logoColor=white" alt="Crate Release"></a>

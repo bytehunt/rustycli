@@ -28,8 +28,6 @@ struct ResponsePayload {
 
 // Implementation of RequestPayload with a constructor function for easy creation
 impl RequestPayload {
-    // Constructor function to create a new RequestPayload instance
-    // Takes a code string as input, and uses CLI arguments to populate other fields
     fn new(code: &str) -> RequestPayload {
         let cli = Cli::parse();
         RequestPayload {
@@ -56,26 +54,16 @@ pub async fn run_rustycli() -> Result<(), Box<dyn std::error::Error>> {
 
     let client = Client::new();
 
-    // Build the POST request with the playground URL, headers, and serialized JSON payload
     let request_builder = client
         .post(PLAYGROUND_URL)
         .header(CONTENT_TYPE, "application/json")
         .json(&request_payload);
 
-    // Get a string representation of the request and print it
-    // let request_str = format!("{:#?}", request_builder);
-    // println!("{:?}", request_str);
-
-    // Make the HTTP request to the playground and await the response
     let resp_json = request_builder
         .send()
         .await?
         .json::<ResponsePayload>()
         .await?;
-
-    // println!("{:?}", resp_json);
-
-    // Display the output of the executed code (if any) or show an error message
 
     let match_result = match (resp_json.stdout, resp_json.stderr) {
         (Some(stdout), _) if !stdout.is_empty() => stdout,
@@ -84,6 +72,5 @@ pub async fn run_rustycli() -> Result<(), Box<dyn std::error::Error>> {
     };
 
     spinner.success(&match_result);
-    // println!("{}", match_result);
     Ok(())
 }
