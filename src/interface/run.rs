@@ -75,10 +75,9 @@ pub async fn run_rustycli() -> Result<(), Box<dyn std::error::Error>> {
 
     // Display the output of the executed code (if any) or show an error message
     match (resp_json.stdout, resp_json.stderr) {
-        (Some(stdout), _) => println!("{}", stdout),
+        (Some(stdout), _) if !stdout.is_empty() => println!("{}", stdout),
         (_, Some(stderr)) => println!("{}", stderr),
         _ => println!("Error: No stdout or stderr found in the response."),
     }
-
     Ok(())
 }
