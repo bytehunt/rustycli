@@ -52,8 +52,9 @@ jobs:
           tar -czvf artifacts/rustycli_macos.tar.gz target/x86_64-apple-darwin/release/rustycli
           cd artifacts
           sha256sum rustycli_macos.tar.gz > rustycli_macos.tar.gz.sha256
-        if: matrix.os == 'macos-latest'
           ls -lah 
+        if: matrix.os == 'macos-latest'
+          
 
     strategy:
       matrix:
