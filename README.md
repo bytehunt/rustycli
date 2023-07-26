@@ -49,9 +49,6 @@
   ```
   $ sudo/doas pacman -Syyy rustycli
   ```
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
-
-
 
 
 <a name="usages"></a>
