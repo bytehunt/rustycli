@@ -16,7 +16,7 @@ categories = ["accessibility", "web-programming", "command-line" ]
 [dependencies]
 clap = { version = "4.3.12", features = ["derive"] }
 spinoff = { version = "0.7.0", features = ["dots", "arc", "line"] }
-reqwest = { version = "0.11.18", features = ["json"] }
+reqwest = { version = "0.11.18", default-features = false, features = ["json", "rustls-tls"] }
 tokio = { version = "1.29.1", features = ["full"] }  
 serde = { version = "1.0.175", features = ["derive"] }
 serde_json = "1.0.103"
