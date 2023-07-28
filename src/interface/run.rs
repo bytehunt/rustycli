@@ -54,18 +54,17 @@ pub async fn run_rustycli() -> Result<(), Box<dyn std::error::Error>> {
 
     let client = Client::new();
 
-    let request_builder = client
+    let build_request = client
         .post(PLAYGROUND_URL)
         .header(CONTENT_TYPE, "application/json")
-        .json(&request_payload);
-
-    let resp_json = request_builder
+        .json(&request_payload)
         .send()
         .await?
         .json::<ResponsePayload>()
         .await?;
 
-    let match_result = match (resp_json.stdout, resp_json.stderr) {
+
+    let match_result = match (build_request.stdout, build_request.stderr) {
         (Some(stdout), _) if !stdout.is_empty() => stdout,
         (_, Some(stderr)) => stderr,
         _ => String::from("Error: No stdout or stderr found in the response."),
