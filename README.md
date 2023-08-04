@@ -15,6 +15,9 @@
 <br>
 
 [`rustycli`](https://github.com/pwnwriter/rustycli) is a tool, allowing you to access the [`rust playground`](https://play.rust-lang.org/) right in the terminal and retaining all the features available on the web version.
+
+Why? For being able to play with Rust on low resource systems.
+Systems such as you find in poor funded schools.
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 
