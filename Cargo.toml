@@ -1,6 +1,6 @@
 [package]
 name = "rustycli"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = [ "PwnWriter < hey@pwnwriter.xyz >" ]
 description = "🦊 Access the rust playground right in terminal."
@@ -15,7 +15,7 @@ categories = ["accessibility", "web-programming", "command-line" ]
 
 [dependencies]
 clap = { version = "4.3.12", features = ["derive"] }
-spinoff = { version = "0.7.0", features = ["dots", "arc", "line"] }
+spinoff = { version = "0.8", features = ["dots", "arc", "line"] }
 reqwest = { version = "0.11.18", default-features = false, features = ["json", "rustls-tls"] }
 tokio = { version = "1.29.1", features = ["full"] }  
 serde = { version = "1.0.175", features = ["derive"] }
