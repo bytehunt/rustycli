@@ -63,11 +63,10 @@ pub async fn run_rustycli() -> Result<(), Box<dyn std::error::Error>> {
         .json::<ResponsePayload>()
         .await?;
 
-
     let match_result = match (build_request.stdout, build_request.stderr) {
         (Some(stdout), _) if !stdout.is_empty() => stdout,
         (_, Some(stderr)) => stderr,
-        _ => String::from("Error: No stdout or stderr found in the response."),
+        _ => crate::log::abort("Error: No stdout or stderr found in the response."),
     };
 
     spinner.success(&match_result);

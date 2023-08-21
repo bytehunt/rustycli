@@ -725,6 +725,7 @@ name = "rustycli"
 version = "0.1.1"
 dependencies = [
  "clap",
+ "colored",
  "reqwest",
  "serde",
  "serde_json",

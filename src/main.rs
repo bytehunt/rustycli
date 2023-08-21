@@ -1,4 +1,5 @@
 pub mod interface;
+pub mod log;
 
 #[tokio::main]
 async fn main() {
