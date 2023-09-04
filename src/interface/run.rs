@@ -46,7 +46,7 @@ pub async fn run_rustycli() -> Result<(), Box<dyn std::error::Error>> {
     let cli = Cli::parse();
     let filename = &cli.run;
     let raw_code = tokio::fs::read_to_string(filename).await?;
-    let spinner = Spinner::new(spinners::Dots, "Compiling... ", Color::Green);
+    let mut spinner = Spinner::new(spinners::Dots, "Compiling... ", Color::Green);
 
     // Trim leading and trailing whitespaces from the code before executing it
     let code = raw_code.trim();
